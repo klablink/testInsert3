@@ -1,0 +1,33 @@
+{
+  "name": "test_mocha",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test:browser": "METEOR_PACKAGE_DIRS='/Users/pbeato/Documents/ksource/meteor12.3/packages' TEST_WATCH=1 meteor test --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.1",
+    "meteor-node-stubs": "^1.2.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.31.4",
+    "eslint-plugin-standard": "^4.1.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
